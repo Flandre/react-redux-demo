@@ -1,17 +1,13 @@
-import React from 'react';
-
-const Link = ({active,children,onClick}) => {
+import React from 'react'
+const Link = ({active, children, onClick}) => {
   if(active){
     return <span>{children}</span>
   }
   return(
-    <a
-      href="#"
-      onClick={e=>{
-        e.preventDefault();
-        onClick();
-      }}
-    >
+    <a href="#" onClick={e=>{
+      e.preventDefault()
+      onClick()
+    }}>
       {children}
     </a>
   )

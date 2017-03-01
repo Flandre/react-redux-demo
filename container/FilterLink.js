@@ -1,8 +1,7 @@
-import { connect } from 'react-redux';
-import Link from '../components/Link';
-import { setVisibility } from '../actions'
+import { connect } from "react-redux"
+import Link from "../components/Link"
+import {setVisibility} from "../actions"
 
-//第二个参数表示组件自身的props
 const mapStateToProps = (state, ownProps) => {
   return {
     active: ownProps.filter === state.visibilityFilter
@@ -12,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onClick: () => {
-      dispatch(setVisibility(ownProps.filter));
+      dispatch(setVisibility(ownProps.filter))
     }
   }
 }

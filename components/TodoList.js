@@ -1,23 +1,14 @@
-import React from 'react';
-import Todo from './Todo';
+import React from 'react'
+import Todo from "./Todo"
 
-//圆括号里面要写大括号
 const TodoList = ({todos, onTodoClick}) => {
-  return (
+  return(
     <ul>
-      {
-        todos.map
-        (
-          todo =>
-            <Todo
-              key={todo.id}
-              {...todo}
-              onClick={() => onTodoClick(todo.id)}
-            />
-        )
-      }
+      {todos.map(todo=>{
+        <Todo key={todo.id} {...todo} onClick={()=>onTodoClick(todo.id)} />
+      })}
     </ul>
   )
-};
+}
 
-export default TodoList;
+export default TodoList
